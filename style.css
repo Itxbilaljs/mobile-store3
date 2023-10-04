@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root
+{
+    --blue:#48afff;
+    --grey:#f1f3f6;
+    --white:#ffffff;
+    --black:#000;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blue);
+
+}
+.header{
+    width: 100%;
+    height: 70px;
+    background-color: var(--white);
+}
+.logo{
+    font-size: 2.5rem;
+    color: var(--black);
+    font-family: sans-serif;
+}
+.search{
+    width: 35vw;
+    border-radius: 5px;
+    height: 60x;
+    border: black;
+    outline: none;
+    padding: 5px;
+    font-size: 1.5rem;
+}
+.search::placeholder{
+    padding: 2px;
+    font-size: 1rem;
+
+}
+.navbar{
+    background-color: #48afff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 15px;
+}
+.nav-btn{
+    padding: 10px 20px;
+    color: var(--black)
+    background-color var(--white);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 1px solid white ;
+}
+.nav-btn2{
+    padding: 10px 20px;
+    color: var(--black);
+    background-color: var(--white);
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.nav-btn:hover{
+    background-color: var(--blue);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+.nav-btn2:hover{
+    background-color: var(--blue);
+    color: var(--white);
+}
+.categories{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--black);
+}
+.company-logo>a>img{
+    width: 10vw;
+    height: 8vh;
+    margin: 10px;
+}
+.company-logo{
+    border: 3px solid transparent;
+}
+.company-logo:hover{
+    opacity: 0.5;
+    border-bottom: 3px solid var(--blue);
+    cursor: pointer;
+
+}
+.banner>img{
+    width: 100%;
+    height: 50%;
+    margin-top: 20px;
+}
+.heading_two{
+    color: rgb(237, 249, 249);
+    font-family: sans-serif;
+    margin: 20px;
+    
+}
+/* card section  */
+#main_div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.cart{
+    background-color: var(--white);
+    color: black;
+    border-radius: 20px ;
+    width: 24vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    
+}.cart>img{
+    width: 17vw;
+    height: 25vh;
+    border-radius: 10px;
+    margin-top: 20px;
+    
+}
+.specs{
+    margin-top: 10px;
+    font-size: 1rem;
+    padding-left: 20px;
+}
+.specs>h3{
+    color: var(--black);
+    
+}
+.specs>h3>span{
+    font-weight: 100;
+    font-family: "stylish";
+}
+.cart-btn{
+    padding:  15px 30px;
+    margin: 1px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 900;
+    font-size: 1rem;
+    font-family: "stylish";
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.cart-btn:hover{
+    background-color: var(--grey);
+    color: var(--black);
+    border: 2px solid var(--black);
+}
+.cart-btn2{
+    padding:  10px 20px;
+    margin: 10px;
+    background-color: var(-);
+    color: var(--blue);
+    font-weight: 900;
+    font-size: 1rem;
+    font-family: "stylish";
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.cart-btn2:hover{
+    background-color: var(--blue);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+.cart-btn3{
+    padding:  0px 10px;
+    margin: 10px;
+    background-color:var(--white);
+    color: var(--blue);
+    font-weight: 900;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.cart-btn3:hover{
+    background-color: var(--blue);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.check-btn{
+    padding: 10px 20px;
+    background-color: var(--white);
+    border: none;
+    color:black;
+    font-size: 1rem;
+    border-radius: 20px;    
+    cursor: pointer;
+    border: 1px solid white;
+}
+.check-btn:hover{
+    background-color: var(--blue);
+    color: var(--black);
+    border: 2px solid var(--white);
+
+}
+.btn-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.head-one{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--grey);
+}
+#cart_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cart_div{
+    color:blue;
+}
+#div2{
+  background-color: blue;  
+}
