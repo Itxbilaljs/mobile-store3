@@ -1,7 +1,7 @@
 const phones = [
     {
       brand: "I phone",
-      img: "./asset/img/iphone 14.jpg",
+      img: "./asset/iphone 14.jpg",
       model: "14 PRO",
       ram: "8gb",
       rom: "512gb",
@@ -10,7 +10,7 @@ const phones = [
     },
     {
       brand: "Samsung",
-      img: "./asset/img/samsungs23.jpg",
+      img: "./asset/samsungs23.jpg",
       model: "S23 ultra",
       ram: "12gb",
       rom: "512gb",
@@ -19,7 +19,7 @@ const phones = [
     },
     {
       brand: "Realme",
-      img: "./assest/img/realme 9i.jpg",
+      img: "./asset/realme 9i.jpg",
       model: "9i",
       ram: "6gb",
       rom: "128gb",
@@ -28,7 +28,7 @@ const phones = [
     },
     {
       brand: "xiomo",
-      img: "./assest/img/redme 10t.jpg",
+      img: "./asset/redme 10t.jpg",
       model: "10T",
       ram: "8gb",
       rom: "256gb",
@@ -37,7 +37,7 @@ const phones = [
     },
     {
       brand: "Motrolla",
-      img: "./assest/img/iphone.jpg",
+      img: "./asset/moto.jpg",
       model: "Edge plus ",
       ram: "12gb",
       rom: "256gb",
@@ -46,7 +46,7 @@ const phones = [
     },
     {
       brand: "Realme",
-      img: "./assest/img/realme 6i.jpg",
+      img: "./asset/realme 6i.jpg",
       model: "6I",
       ram: "6gb",
       rom: "128 gb",
@@ -55,7 +55,7 @@ const phones = [
     },
     {
       brand: "Techno",
-      img: "./assest/img/camon 20.jpg",
+      img: "./asset/camon 20.jpg",
       model: "Camon 20",
       ram: "8gb",
       rom: "256gb",
@@ -77,11 +77,21 @@ for (i = 0; i < phones.length; i++) {
   <h3>Price : <span>${phones[i].price}</span></h3>
 </div>
 
-  <button class="cart-btn" onclick="AddToCart(${i})">Add To Cart</button>
+  <button class="cart-btn " onclick="AddToCart(${i})">Add To Cart</button>
 </div>`;
 }
 
-const ArrayOfCart = [];
+const receive_data = localStorage.getItem("cartarr");
+const json_data = JSON.parse(receive_data);
+
+let ArrayOfCart;
+if(Array.isArray(json_data)){
+  ArrayOfCart = [...json_data];
+}
+else{
+   ArrayOfCart = [];
+
+}
 function AddToCart(index) {
   // ArrayOfCart.push(phones[index])
   // console.log(ArrayOfCart);
@@ -89,12 +99,10 @@ function AddToCart(index) {
   if (ArrayOfCart.includes(phones[index]) === true) {
     // console.log('Item Is Existed');
     // phones[index].quantity += 1;
-    for (let i = 0; i <ArrayOfCart.length; i++) {
-      if(ArrayOfCart[i]=== phones[index]){
-        phones[index].quantity +=1;
-
+    for (let i = 0; i < ArrayOfCart.length; i++) {
+      if (ArrayOfCart[i] === phones[index]) {
+        phones[index].quantity += 1;
       }
-      
     }
     Swal.fire({
       position: "top-end",
@@ -117,15 +125,11 @@ function AddToCart(index) {
   }
 }
 
-
 // let key = prompt("enter key")
 // let value = prompt("enter value")
 
-
-
 // localStorage.clear()
 function GoToCart() {
-  const items = JSON.stringify(ArrayOfCart)
-  localStorage.setItem('cartarr', items )
-  window.location = "cart.html";
-}
+  const items = JSON.stringify(ArrayOfCart);
+  localStorage.setItem("cartarr", items);
+  window.location = "cart.html";}

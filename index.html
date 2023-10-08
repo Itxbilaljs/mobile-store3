@@ -1,34 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phones Store</title>
+    <title>THE TECH SOPT</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    
+
 </head>
+
 <body>
     <div>
-        <header class="main-head">
-            <nav class="navbar"><h1 class="logo"><i class="ri-computer-line"></i> MOBILE SHOP</h1><input class="search" type="text" placeholder="Search..."><div><button class="nav-btn">log in</button><button class="nav-btn2">Register</button></div></nav>
+        <!-- navbar start  -->
+        <header class="header">
+            <nav class="navbar">
+                <h1 class="logo"></i>MOBILE STORE</h1><input class="search" type="text"
+                    placeholder="Search...">
+                <div><button onclick="login()" class="nav-btn">log in</button><button onclick="register()"
+                        class="nav-btn2">Register</button></div>
+            </nav>
         </header>
+        <!-- navbar end  -->
+        <!-- <div class="categories">
+            <div class="company-logo">
+                <a href="#mobile-cart"><img src="./assest/img/mobiles.svg" alt="electronic products"></a>
+            </div> -->
+            <!-- <div class="company-logo">
+                <a href=""><img src="./assest/img/laptops.svg" alt="electronic products"></a>
+            </div>
+            <div class="company-logo">
+                <a href=""><img src="./assest/img/smart-watches.svg" alt="electronic products"></a>
+            </div>
+            <div class="company-logo">
+                <a href=""><img src="./assest/img/wireless-earbuds.svg" alt="electronic products"></a>
+            </div>
+            <div class="company-logo">
+                <a href=""><img src="./assest/img/bluetooth-speakers.svg" alt="electronic products"></a>
+            </div>
+            <div class="company-logo">
+                <a href=""><img src="./assest/img/power-banks.svg" alt="electronic products"></a>
+            </div>
+        </div> -->
         <div class="banner">
-            <img src="https://images.priceoye.pk/banners/pakistan-priceoye-slider-9z2jh.jpg" alt="shop banner ">
-        </div>
-        <h2 class="heading_two">MOBILE PHONES</h2>
+            <img src="./asset/logo.jpg" alt="">
+        <h2 class="heading_two">Latest Mobiles</h2>
     </div>
 
-    
-    
+
+
     <div id="main_div">
-        
+
     </div>
-    <div class="btn-div"><button onclick="GoToCart()" class="check-btn">CheckOut Cart</button></div>
+    <div class="btn-div"><button onclick="GoToCart()" class="button-29">CHECKOUT CART </button></div>
 
     <script src="app.js"></script>
 </body>
+
 </html>
